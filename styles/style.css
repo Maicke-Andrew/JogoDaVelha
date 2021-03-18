@@ -1,0 +1,54 @@
+body{
+    text-align: center;
+    background-color: black;
+}
+h1{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border: 1px solid red;
+    display: inline-block;
+}
+
+.o{
+    position: relative;
+}
+
+.o:after{
+    position: absolute;
+    content: url("./o.png");
+    line-height: 100px;
+    top: 13px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.x{
+    position: relative;
+}
+
+.x:after{
+    position: absolute;
+    content: url("./x.png");
+    line-height: 100px;
+    top: 13px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+#btn{
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    border: 2px solid red;
+    border-radius: 6px;
+    background-color: black;
+    color: red;
+}
