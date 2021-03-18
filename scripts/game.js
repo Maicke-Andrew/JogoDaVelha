@@ -15,25 +15,17 @@ const winSequenc =[
 ]
 
 function handleMove(position){
-
     if(gameOver){
         return;
     }
-
-    if(everBoard){
-        return;
-    }
-
     if(board[position] == ''){
        board[position] = symbols[playerTime];
-
        gameOver = isWin();
-
     if(!gameOver){
        playerTime = (playerTime == 0 ? 1 : 0);
        }
     }
-    return noWin();
+    return gameOver;
 }
 
 function isWin() {
@@ -51,25 +43,5 @@ function isWin() {
                return true;
            }
     }
-    return false;
-}
-
-function noWin() {
-
-    for(let i =0; i<board.length; i++){
-        let local = board[i];
-    
-        if(local[0] == local[1] &&
-           local[0] == local[2] &&
-           local[0] == local[3] &&
-           local[0] == local[4] &&
-           local[0] == local[5] &&
-           local[0] == local[6] &&
-           local[0] == local[7] &&
-           local[0] == local[8] &&
-           local[0] != ''){
-               return true;
-           }         
-    } 
     return false;
 }

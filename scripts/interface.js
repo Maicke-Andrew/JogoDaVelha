@@ -9,24 +9,22 @@ document.addEventListener('DOMContentLoaded', ()=>{
 })
 
 function handleClick(event){
-
-    if(handleMove(event.target.id)){
+    let square = event.target;
+    let position = square.id;
+    if (handleMove(position)){
         setTimeout(()=>{
-            if(playerTime == 0){
+        if(playerTime == 0){
             alert("Jogo Terminou - O Jogador X Venceu");
-        }else if(playerTime == 1){
-            alert("Jogo Terminou - O Jogador O Venceu")
         }else{
-            alert("Velha")    
-        }
-        }, 10);
+        alert("Jogo Terminou - O Jogador O Venceu")
+        } }, 10);
     };
-    updateSquare(event.target.id);
+    updateSquare(position);
 }
 
 function updateSquare(position){
-    let square = document.getElementById(position.toString())
-    let symbol = board[position]
+    let square = document.getElementById(position.toString());
+    let symbol = board[position];
     square.innerHTML = `<div class='${symbol}'></div>`
 }
 
