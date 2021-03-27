@@ -15,8 +15,10 @@ function handleClick(event){
         setTimeout(()=>{
         if(playerTime == 0){
             alert("Jogo Terminou - O Jogador X Venceu");
+            pontosXSalvos();
         }else{
-        alert("Jogo Terminou - O Jogador O Venceu")
+            alert("Jogo Terminou - O Jogador O Venceu")
+            pontosOSalvos();
         } }, 10);
     };
     updateSquare(position);
