@@ -7,6 +7,8 @@ h1{
     font-family: Arial, Helvetica, sans-serif;
 }
 .square{
+    position: relative;
+    bottom: 100px;
     width: 100px;
     height: 100px;
     background-color: black;
@@ -23,7 +25,7 @@ h1{
     content: url("./o.png");
     line-height: 100px;
     top: 13px;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     right: 0;
 }
@@ -44,6 +46,37 @@ h1{
 }
 
 #btn{
+    position: relative;
+    right: 120px;
+    bottom: 80px;
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    border: 2px solid red;
+    border-radius: 6px;
+    background-color: black;
+    color: red;
+}
+
+#pontosX{
+    padding-right: 100px;
+}
+
+#pontosO{
+    position: relative;
+    padding-left: 100px;
+    bottom: 57px
+}
+
+#doisPontos{
+    position: relative;
+    bottom: 117px;
+}
+
+#pts{
+    position: relative;
+    left: 120px;
+    bottom: 80px;
     width: 100px;
     height: 40px;
     margin-top: 10px;
